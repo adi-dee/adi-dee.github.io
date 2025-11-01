@@ -37,20 +37,37 @@ header h1 {
   color: var(--text);
 }
 
+.title {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0 auto;
+
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 8px;
+
+
+}
+
 /* --- Layout --- */
 main {
   max-width: 900px;
   margin: 0 auto;
-  padding: 140px 24px 100px;
+  padding: 60px 24px 100px;
 }
+
+
 
 /* --- Projects --- */
 .project {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  margin-top: 30px;
   padding: 60px 0;
-  border-top: 1px solid var(--line);
+  border-top: 2px solid rgb(177 117 114);
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -110,7 +127,6 @@ main {
   border-top: 1px solid var(--line);
   padding: 80px 0;
   text-align: center;
-  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -119,6 +135,11 @@ main {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+#about a {
+  color: inherit;
+}
+
 
 /* --- Footer --- */
 footer {
@@ -134,7 +155,7 @@ footer {
 
 footer a {
   color: var(--text);
-  text-decoration: none;
+  /* text-decoration: none; */
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
@@ -144,13 +165,26 @@ footer a:hover {
   color: var(--accent);
 }
 
+
 /* --- Responsive --- */
 @media (min-width: 720px) {
   .project {
     flex-direction: row;
     align-items: center;
     gap: 40px;
+    margin-top: 100px;
   }
+
+    main {
+    padding: 25px 24px 100px;
+  }
+
+  .title {
+    text-align: right;
+    font-size: 1.6rem;
+    padding-left: 0;
+  }
+
 
   .placeholder {
     flex: 1;

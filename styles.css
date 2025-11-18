@@ -91,13 +91,17 @@ main {
   margin-bottom: 8px;
 }
 
-.project a {
+.project .link-text {
   color: var(--text);
   text-decoration: none;
   font-weight: 500;
   border-bottom: 1px solid var(--line);
   padding-bottom: 2px;
   transition: color 0.2s ease;
+}
+
+.project a {
+  display: contents;
 }
 
 .project a:hover {
@@ -194,4 +198,31 @@ footer a:hover {
   .text {
     flex: 1;
   }
+}
+
+
+.image-link {
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.25s ease;
+}
+
+.image-link:hover {
+  transform: scale(1.01); /* optional: tiny lift */
+}
+
+/* soft white wash */
+.image-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.image-link:hover::after {
+  opacity: 1;
 }
